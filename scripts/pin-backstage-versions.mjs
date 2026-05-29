@@ -41,6 +41,9 @@ if (backstagePackageJson.resolutions['GendocuPublicApis']) {
   }
 }
 
+// Enforce @remixicon/react versions below 4.9.0 due to a license change
+resolutions['@remixicon/react'] = '>=4.6.0 <4.9.0';
+
 // sort resolutions by name
 packageJson.resolutions = Object.entries(resolutions)
   .sort(([a], [b]) => a.localeCompare(b))

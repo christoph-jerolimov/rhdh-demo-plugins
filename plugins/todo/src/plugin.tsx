@@ -2,19 +2,20 @@ import {
   createFrontendPlugin,
   PageBlueprint,
 } from '@backstage/frontend-plugin-api';
+import { RiTodoLine } from '@remixicon/react';
 
 import { rootRouteRef } from './routes';
 
 export const page = PageBlueprint.make({
   params: {
     title: 'Todo',
-    icon: <div />,
+    icon: <RiTodoLine />,
     path: '/todo',
     routeRef: rootRouteRef,
     loader: () =>
-      import('./components/ExampleComponent').then(m =>
-        <m.ExampleComponent />,
-      ),
+      import('./components/TodoPage').then(m => (
+        <m.TodoPage />
+      )),
   },
 });
 

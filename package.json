@@ -248,6 +248,7 @@
     "@backstage/types": "1.2.2",
     "@backstage/ui": "0.13.2",
     "@backstage/version-bridge": "1.0.12",
+    "@remixicon/react": ">=4.6.0 <4.9.0",
     "@techdocs/cli": "1.10.6",
     "@types/react": "^18",
     "@types/react-dom": "^18",

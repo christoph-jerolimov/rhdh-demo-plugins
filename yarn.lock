@@ -1895,7 +1895,7 @@
   optionalDependencies:
     keytar "^7.9.0"
 
-"@backstage/cli@0.36.0", "@backstage/cli@~0.36.0":
+"@backstage/cli@0.36.0", "@backstage/cli@^0.36.0", "@backstage/cli@~0.36.0":
   version "0.36.0"
   resolved "https://registry.yarnpkg.com/@backstage/cli/-/cli-0.36.0.tgz#cfe08eb73a1e77d37a5817d2a95fb177e57661cd"
   integrity sha512-MWYb91tVytkatrV1FF+4qdCs9/g+88w4sklcuzfzMVJ5HGrWErhSlXa/XPu+mM86QbhpjBo4w9lSBxnJIaMQMw==
@@ -2170,7 +2170,7 @@
     "@backstage/plugin-app" "^0.4.1"
     "@react-hookz/web" "^24.0.0"
 
-"@backstage/frontend-dev-utils@0.1.0":
+"@backstage/frontend-dev-utils@0.1.0", "@backstage/frontend-dev-utils@^0.1.0":
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/@backstage/frontend-dev-utils/-/frontend-dev-utils-0.1.0.tgz#7dc5dca8cb684b252c1e8ececd730c66b9aef717"
   integrity sha512-KTDklQA8I3mbvpRAregxKvqLtXoGkWHPZ9xUkDgAnFsDiUI+yHdziJ0sQKEzChJZGkU0qUs6BHfNaKE5K7lRLg==
@@ -2206,7 +2206,7 @@
     zod "^3.25.76 || ^4.0.0"
     zod-to-json-schema "^3.25.1"
 
-"@backstage/frontend-test-utils@0.5.1":
+"@backstage/frontend-test-utils@0.5.1", "@backstage/frontend-test-utils@^0.5.1":
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/@backstage/frontend-test-utils/-/frontend-test-utils-0.5.1.tgz#db79ffca3ac27dcec45f60a3be075ec16f1b75b3"
   integrity sha512-yKv7yXe0nQk520s4L05csMp3sEPHhWomrIe262/KO5R9+Vzg8fPWsums3fibEiNnLMq3iwl4zvUrIMhkzwzhkA==
@@ -8651,6 +8651,15 @@
     "@swc/helpers" "^0.5.0"
     react-aria "^3.48.0"
 
+"@react-aria/interactions@^3.27.1":
+  version "3.28.1"
+  resolved "https://registry.yarnpkg.com/@react-aria/interactions/-/interactions-3.28.1.tgz#852294ae63f6a7d8aeeba3a1e7343daa8cd8507c"
+  integrity sha512-Bqb+HrD5I5MHS2SKBhISYqo2SW8Y2dfzgF/Y1lIJq7xqLxheo9vzxPGEHhz+XzkgGfoqEJx8A6a3C7uiqS3HWA==
+  dependencies:
+    "@react-types/shared" "^3.34.0"
+    "@swc/helpers" "^0.5.0"
+    react-aria "^3.48.0"
+
 "@react-aria/toast@^3.0.9":
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/@react-aria/toast/-/toast-3.1.1.tgz#dd86a17117a320d06396e31ae91e80f4282f2ee4"
@@ -8671,6 +8680,22 @@
   dependencies:
     "@react-hookz/deep-equal" "^1.0.4"
 
+"@react-stately/layout@^4.6.0":
+  version "4.7.1"
+  resolved "https://registry.yarnpkg.com/@react-stately/layout/-/layout-4.7.1.tgz#90279bbdfe90b81a83a1599aeea23d41580afdc5"
+  integrity sha512-71fNbW2LoaRpy337wYhdANkx0E4xbqQuelW39msV//ZZ6SVEK/AuOHEKwgyympKkYXi6Ri/op0snOzH0LmXvyw==
+  dependencies:
+    "@swc/helpers" "^0.5.0"
+    react-stately "^3.46.0"
+
+"@react-stately/overlays@^3.6.23":
+  version "3.7.1"
+  resolved "https://registry.yarnpkg.com/@react-stately/overlays/-/overlays-3.7.1.tgz#e00d943ef7da66be314d8be95913dbf473182ebe"
+  integrity sha512-vGw9f8i5kPvaQqvvQ8iIhPhJZorwtg2rXycqnUNXkNLadewh1S0ocbnRvrb4HW/GGC37rFmGcG1fYCHA/WIn6w==
+  dependencies:
+    "@swc/helpers" "^0.5.0"
+    react-stately "^3.46.0"
+
 "@react-stately/toast@^3.1.2":
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/@react-stately/toast/-/toast-3.2.1.tgz#404d7ba2dacdc522fbb1014267608cea8e70ea3d"
@@ -8679,7 +8704,7 @@
     "@swc/helpers" "^0.5.0"
     react-stately "^3.46.0"
 
-"@react-types/shared@^3.35.0":
+"@react-types/shared@^3.34.0", "@react-types/shared@^3.35.0":
   version "3.35.0"
   resolved "https://registry.yarnpkg.com/@react-types/shared/-/shared-3.35.0.tgz#6427fdc266c0a5980679e10ab9df5db5da234f73"
   integrity sha512-iNWvuzEwANttpQpdlu8nPBtdHb0mcCMj1ZTH//iRB5E/14IAnyRlR25rxH7pNLyzHINsPGEKnWvpwDMCT6vziQ==
@@ -8693,10 +8718,10 @@
     generic-pool "3.9.0"
     yallist "4.0.0"
 
-"@remixicon/react@^4.6.0":
-  version "4.9.0"
-  resolved "https://registry.yarnpkg.com/@remixicon/react/-/react-4.9.0.tgz#e4469985dc88af987f03c2309e36b04028cb4600"
-  integrity sha512-5/jLDD4DtKxH2B4QVXTobvV1C2uL8ab9D5yAYNtFt+w80O0Ys1xFOrspqROL3fjrZi+7ElFUWE37hBfaAl6U+Q==
+"@remixicon/react@>=4.6.0 <4.9.0", "@remixicon/react@^4.6.0":
+  version "4.8.0"
+  resolved "https://registry.yarnpkg.com/@remixicon/react/-/react-4.8.0.tgz#7357dbffce4612149d50e42808c63fd4fedafe90"
+  integrity sha512-cbzR04GKWa3zWdgn0C2i+u/avb167iWeu9gqFO00UGu84meARPAm3oKowDZTU6dlk/WS3UHo6k//LMRM1l7CRw==
 
 "@rjsf/core@5.24.13":
   version "5.24.13"

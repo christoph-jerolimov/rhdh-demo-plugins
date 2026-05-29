@@ -59,6 +59,13 @@ export class TodoListService {
   ) {
     this.#logger = logger;
     this.#catalog = catalog;
+
+    // Create 5 initial todo items to populate the list with some data.
+    this.createTodo({ title: 'Example todo item' }, { credentials: { principal: { userEntityRef: 'user:default/example' } } });
+    this.createTodo({ title: 'Another example todo item' }, { credentials: { principal: { userEntityRef: 'user:default/example' } } });
+    this.createTodo({ title: 'Todo item with entity reference', entityRef: 'component:default/sample' }, { credentials: { principal: { userEntityRef: 'user:default/example' } } });
+    this.createTodo({ title: 'Yet another example todo item' }, { credentials: { principal: { userEntityRef: 'user:default/example' } } });
+    this.createTodo({ title: 'Last example todo item' }, { credentials: { principal: { userEntityRef: 'user:default/example' } } });
   }
 
   async createTodo(
