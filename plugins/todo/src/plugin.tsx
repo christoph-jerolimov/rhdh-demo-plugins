@@ -7,6 +7,8 @@ import { rootRouteRef } from './routes';
 
 export const page = PageBlueprint.make({
   params: {
+    title: 'Todo',
+    icon: <div />,
     path: '/todo',
     routeRef: rootRouteRef,
     loader: () =>

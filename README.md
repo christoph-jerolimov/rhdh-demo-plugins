@@ -24,7 +24,27 @@ For this demo I manually copied, modified or skipped these files:
 
 ### 2. Created scripts to enforce dependencies
 
-```
+```shell
 node ./scripts/set-backstage-dependencies.mjs
 node ./scripts/pin-backstage-versions.mjs
+```
+
+### 3. Created a scaffolder todo frontend and backend plugin
+
+Created both plugins with `yarn new`. Both failed with:
+
+```
+Warning: Failed to execute command 'yarn lint --fix', ExitCodeError: Command 'yarn lint --fix' exited with code 1
+```
+
+Removed the plugins, installed this dev dependencies to resolve that problem and verified this by recreating the plugins.
+
+```shell
+yarn add -W --dev jest@^30.3.0 @jest/environment-jsdom-abstract@^30.3.0 @types/jest@^30.0.0
+```
+
+After that added missing dev dependencies
+
+```shell
+yarn --cwd plugins/todo add --dev react@^18 react-dom@^18 react-router-dom@^7.14.1
 ```
