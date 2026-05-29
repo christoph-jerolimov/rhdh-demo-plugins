@@ -2,6 +2,8 @@
 
 ## How this repo is created
 
+### 1. Basics from Backstage Community Plugins repo
+
 This demo project is manually created inspired by the "new workspace" process of the Backstage Community Plugins repository.
 
 The Backstage Community Plugins repo `new-workspace` command runs `npx @backstage/create-app@latest --path ${workspacePath} --skip-install --template-path=${templatePath}` internally, where template path is the local copy of https://github.com/backstage/community-plugins/tree/main/workspaces/repo-tools/packages/cli/src/lib/workspaces/templates/workspace.
@@ -19,3 +21,10 @@ For this demo I manually copied, modified or skipped these files:
 - README.md.hbs - skipped
 - tsconfig.json - copied
 - yarn.lock - copied
+
+### 2. Created scripts to enforce dependencies
+
+```
+node ./scripts/set-backstage-dependencies.mjs
+node ./scripts/pin-backstage-versions.mjs
+```
