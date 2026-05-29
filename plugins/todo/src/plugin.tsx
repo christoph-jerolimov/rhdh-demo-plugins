@@ -12,10 +12,7 @@ export const page = PageBlueprint.make({
     icon: <RiTodoLine />,
     path: '/todo',
     routeRef: rootRouteRef,
-    loader: () =>
-      import('./components/TodoPage').then(m => (
-        <m.TodoPage />
-      )),
+    loader: () => import('./components/TodoPage').then(m => <m.TodoPage />),
   },
 });
 
@@ -24,5 +21,5 @@ export const todoPlugin = createFrontendPlugin({
   extensions: [page],
   routes: {
     root: rootRouteRef,
-  }
+  },
 });

@@ -21,7 +21,9 @@ const columns: ColumnConfig<TodoItem>[] = [
   {
     id: 'createdAt',
     label: 'Created at',
-    cell: item => <CellText title={new Date(item.createdAt).toLocaleString()} />,
+    cell: item => (
+      <CellText title={new Date(item.createdAt).toLocaleString()} />
+    ),
   },
 ];
 

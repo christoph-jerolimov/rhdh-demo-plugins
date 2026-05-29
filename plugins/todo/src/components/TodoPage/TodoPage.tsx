@@ -1,16 +1,23 @@
 import { Progress } from '@backstage/core-components';
-import {
-  useApi,
-  fetchApiRef,
-} from '@backstage/frontend-plugin-api';
+import { useApi, fetchApiRef } from '@backstage/frontend-plugin-api';
 import { Header, Container } from '@backstage/ui';
 import useAsync from 'react-use/esm/useAsync';
 import { TodoList } from '../TodoList';
 import type { TodoItem } from '../TodoList';
 
 const exampleTodos: TodoItem[] = [
-  { id: '1', title: 'Install the backend plugin', createdBy: 'user:default/guest', createdAt: new Date().toISOString() },
-  { id: '2', title: 'Connect the frontend to real data', createdBy: 'user:default/guest', createdAt: new Date().toISOString() },
+  {
+    id: '1',
+    title: 'Install the backend plugin',
+    createdBy: 'user:default/guest',
+    createdAt: new Date().toISOString(),
+  },
+  {
+    id: '2',
+    title: 'Connect the frontend to real data',
+    createdBy: 'user:default/guest',
+    createdAt: new Date().toISOString(),
+  },
 ];
 
 // TEMPLATE NOTE:
@@ -32,7 +39,7 @@ function useTodos() {
     const data = await response.json();
 
     if (data.items.length === 0) {
-      const createTodo = (newTodo: { title: string, entityRef?: string }) =>
+      const createTodo = (newTodo: { title: string; entityRef?: string }) =>
         fetch(`plugin://todo/todos`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -42,7 +49,10 @@ function useTodos() {
       // Create 5 initial todo items to populate the list with some data.
       await createTodo({ title: 'Example todo item' });
       await createTodo({ title: 'Another example todo item' });
-      await createTodo({ title: 'Todo item with entity reference', entityRef: 'component:default/sample' });
+      await createTodo({
+        title: 'Todo item with entity reference',
+        entityRef: 'component:default/sample',
+      });
       await createTodo({ title: 'Yet another example todo item' });
       await createTodo({ title: 'Last example todo item' });
     }
@@ -62,7 +72,7 @@ export const TodoPage = () => {
     <>
       <Header title="Welcome to todo!" />
       <Container>
-        <TodoList todos={error ? exampleTodos : (todos ?? [])} />
+        <TodoList todos={error ? exampleTodos : todos ?? []} />
       </Container>
     </>
   );
