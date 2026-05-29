@@ -30,6 +30,23 @@ function useTodos() {
     }
 
     const data = await response.json();
+
+    if (data.items.length === 0) {
+      const createTodo = (newTodo: { title: string, entityRef?: string }) =>
+        fetch(`plugin://todo/todos`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(newTodo),
+        });
+
+      // Create 5 initial todo items to populate the list with some data.
+      await createTodo({ title: 'Example todo item' });
+      await createTodo({ title: 'Another example todo item' });
+      await createTodo({ title: 'Todo item with entity reference', entityRef: 'component:default/sample' });
+      await createTodo({ title: 'Yet another example todo item' });
+      await createTodo({ title: 'Last example todo item' });
+    }
+
     return data.items;
   }, [fetch]);
 }
